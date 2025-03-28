@@ -1,0 +1,34 @@
+GET:
+
+curl --location 'localhost:3000/products?productId=1'
+
+POST: 
+
+curl --location 'localhost:3000/products' \
+--header 'Content-Type: application/json' \
+--data '{
+    "nome_do_produto": "Nokia Tijolo",
+    "fornecedor": "Nokia",
+    "endereco_fornecedor": "Rua da Nokia",
+    "quantidade": 1000,
+    "descricao": "Tijolo maciço bom demais vem com snake"
+}'
+
+PUT:
+
+curl --location --request PUT 'localhost:3000/product?productId=1' \
+--header 'Content-Type: application/json' \
+--data '{
+    "id": 1,
+    "nome_do_produto": "Redmi Note 12",
+    "fornecedor": "Xiaomi",
+    "endereco_fornecedor": "Rua Xiaomi, bairro X",
+    "quantidade": 1,
+    "descricao": "Tem uma enorme tela Touchscreen de 6.43 polegadas com uma resolução de 2400x1080 pixel. Sobre as características deste Redmi Note 11 na verdade não falta nada.",
+    "data_registro": null,
+    "data_update": null
+}'
+
+DELETE:
+
+curl --location --request DELETE 'localhost:3000/product?productId=2'
